@@ -12,19 +12,28 @@ const ParallaxProvider = dynamic(
 );
 
 const Commendations = () => {
-	return (
-		<main className="h-72 w-screen bg-purple-900">
-		</main>
-	);
-}
-
+  return (
+    <main className="h-72 w-screen bg-purple-900 flex justify-center items-center">
+        <a href="https://www.the-lep.com/the-mayors-innovation-prize/">
+          <Image
+            src="https://www.the-lep.com/media/9172/wyca-mowy-lep-tpx-eu.png?width=500&height=133.4418226200163"
+            alt="The Mayor's Innovation Prize"
+            height={1500 / 2}
+            width={1133 / 2}
+          />
+        </a>
+    </main>
+  );
+};
 const Footer = () => {
-	return (
-		<main className="h-72 w-screen bg-fuchsia-950">
-			<div></div>
-		</main>
-	);
-}
+  return (
+    <main className="h-72 w-screen bg-fuchsia-950">
+      <div>
+				<p></p>
+			</div>
+    </main>
+  );
+};
 
 export default function Home() {
   const targetRef = useRef();
@@ -56,11 +65,11 @@ export default function Home() {
                 introducing recuppa.
               </p>
             </div>
-						</Parallax>
-            <Parallax>
-              <div className="flex text-3xl m-6 border-l-recuppadark">
-                <p>Reusing cups has never been easier.</p>
-              </div>
+          </Parallax>
+          <Parallax>
+            <div className="flex text-3xl m-6 border-l-recuppadark">
+              <p>Reusing cups has never been easier.</p>
+            </div>
           </Parallax>
         </div>
         <Parallax
@@ -68,8 +77,8 @@ export default function Home() {
           targetElement={targetElement}
         ></Parallax>
         <div className="flex items-center bg-recuppadark w-screen h-screen"></div>
-				<Commendations />
-				<Footer />
+        <Commendations />
+        <Footer />
       </ParallaxProvider>
     </main>
   );

@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-		remotePatterns: [
-			{
-				protocol: "https",
-				hostname: "images.pexels.com",
-				port: "",
-				pathname: "/photos/16884742/pexels-photo-16884742/free-photo-of-sea-flight-dawn-sunset.jpeg",
-			},
-		],
-	},
-
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.the-lep.com',
+        port: '',
+        pathname: '/media/9172/wyca-mowy-lep-tpx-eu.png',
+      },
+    ],
+  },
 };
+
 
 module.exports = nextConfig;
