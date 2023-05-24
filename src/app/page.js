@@ -11,6 +11,21 @@ const ParallaxProvider = dynamic(
   { ssr: false }
 );
 
+const Commendations = () => {
+	return (
+		<main className="h-72 w-screen bg-purple-900">
+		</main>
+	);
+}
+
+const Footer = () => {
+	return (
+		<main className="h-72 w-screen bg-fuchsia-950">
+			<div></div>
+		</main>
+	);
+}
+
 export default function Home() {
   const targetRef = useRef();
 
@@ -37,7 +52,7 @@ export default function Home() {
             speed={10}
           >
             <div className="flex text-center">
-              <p className="text-9xl pt-12 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-recuppagreen to-recuppalight">
+              <p className="text-9xl p-12 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-recuppagreen to-recuppalight">
                 introducing recuppa.
               </p>
             </div>
@@ -53,7 +68,8 @@ export default function Home() {
           targetElement={targetElement}
         ></Parallax>
         <div className="flex items-center bg-recuppadark w-screen h-screen"></div>
-        <br />
+				<Commendations />
+				<Footer />
       </ParallaxProvider>
     </main>
   );
