@@ -16,6 +16,8 @@ module.exports = {
 				'recuppadark': '#161f32',
 				'recuppamedium': '#1a243a',
 				'recuppalight': '#4b698a',
+				'recuppagreen': '#275c6c',
+				'recuppalightgreen': '#bad7d2',
 			},
     },
   },
