@@ -72,12 +72,32 @@ export default function Home() {
             speed={16}
           >
             <div className="flex text-center">
-              <p className="text-9xl p-12 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-recuppagreen to-recuppalight">
+              <p className="text-8xl p-8 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-recuppagreen to-recuppalight">
                 introducing recuppa.
               </p>
             </div>
           </Parallax>
-          <Parallax speed={imageSpeed} scale={[1, 1.8, "easeIn"]}>
+          <Parallax
+            offset={0} // Start at the top of the scrollable container
+            speed={10} // Scroll at half the speed of the container
+            style={{ opacity: 1 }} // Initial opacity value
+            data={{
+              // Modify the opacity value based on scroll position
+              opacity: [-10, -20, "easeIn"],
+            }}
+          >
+            <Parallax speed={-5} startScroll={0} endScroll={650}>
+              <div className="text-3xl h-16 w-screen text-center border-l-recuppadark">
+                <p>Reusing cups has never been easier.</p>
+              </div>
+            </Parallax>
+          </Parallax>
+          <Parallax
+            startScroll={0}
+            endScroll={600}
+            speed={imageSpeed}
+            scale={[1, 1.8, "easeIn"]}
+          >
             <Image
               src={logo_cup}
               alt="a recuppa reusable cup"
@@ -107,27 +127,18 @@ export default function Home() {
               </p>
             </div>
           </Parallax>
-          {/* <Parallax
-            className=""
-            offset={0} // Start at the top of the scrollable container
-            speed={10} // Scroll at half the speed of the container
-            style={{ opacity: 1 }} // Initial opacity value
-            data={{
-              // Modify the opacity value based on scroll position
-              opacity: [-10, -20, "easeIn"],
-            }}
-          >
-            <div className="text-3xl m-6 border-l-recuppadark">
-              <p>Reusing cups has never been easier.</p>
-            </div>
-          </Parallax> */}
           <div className="h-96 w-96"></div>
         </div>
         <Parallax
           opacity={[-2, 10, "easeInOut"]}
           targetElement={targetElement}
         ></Parallax>
-        <div className="flex items-center bg-recuppadark w-screen h-screen"></div>
+        <section
+          id="the-disposable-cup-problem"
+          className="flex flex-row text-4xl justify-center text-center bg-recuppadark w-screen h-screen text-white"
+        >
+          <h1 className="m-7">the disposable cup problem</h1>
+        </section>
         <Commendations />
         <Footer />
       </ParallaxProvider>
