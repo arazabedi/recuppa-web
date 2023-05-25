@@ -14,7 +14,7 @@ const ParallaxProvider = dynamic(
 
 const Commendations = () => {
   return (
-    <main className="h-72 w-screen bg-purple-900 flex justify-center items-center">
+    <main className="h-72 w-screen bg-teal-900 flex justify-center items-center">
       <a href="https://www.the-lep.com/the-mayors-innovation-prize/">
         <Image
           src="https://www.the-lep.com/media/9172/wyca-mowy-lep-tpx-eu.png?width=500&height=133.4418226200163"
