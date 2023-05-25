@@ -34,6 +34,7 @@ export default function Home() {
 
   const [imageSpeed, setImageSpeed] = useState(0);
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleScroll = () => {
     const scrollPosition = window.scrollY; // => scroll position
     setImageSpeed(scrollPosition * 0.06);
@@ -49,7 +50,7 @@ export default function Home() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   useEffect(() => {
     setElement(targetRef.current);
@@ -120,7 +121,7 @@ export default function Home() {
                 Our specially designed cups are made from repurposed coffee
                 ground and husk that would otherwise be discarded.
               </p>
-              <p>They're reusable and made from renewable materials.</p>
+              <p>They are reusable and made from renewable materials.</p>
               <p>
                 Heat resistant, barista friendly and fits into standard cup
                 holders.
