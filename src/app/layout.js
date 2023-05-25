@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Ubuntu } from "next/font/google";
-
-const ubuntu = Ubuntu({ subsets: ["latin"], weight: '300' });
+const ubuntu = Ubuntu({ subsets: ["latin"], weight: "300" });
 
 export const metadata = {
   title: "recuppa",
