@@ -27,6 +27,55 @@ const Commendations = () => {
   );
 };
 
+const ReasonCards = () => {
+  return (
+    <>
+      <div className="flex flex-col p-48 gap-5">
+        <div className="flex flex-row gap-5">
+          <div className="flex flex-row justify-center items-center bg-yellow1 h-72 w-1/2">
+            <div className="text-white">reason 1</div>
+            <div className="flex flex-row text-deepblue">
+              <p>1</p>
+              <p>out of</p>
+              <p>3</p>
+            </div>
+            <div className="text-white">
+              Because they must remember the cup when they go out
+            </div>
+          </div>
+          <div className="flex flex-row justify-center items-center bg-blue1 h-72 w-1/2">
+            <div className="text-white">reason 2</div>
+            <div className="text-white">
+              &quot;I have no room to carry the cup&quot;
+            </div>
+            <div>22%</div>
+          </div>
+        </div>
+        <div className="flex flex-row gap-5">
+          <div className="flex flex-row justify-center items-center bg-green1 h-72 w-1/2">
+            <div className="flex flex-row">
+              <p className="text-yellow1">27%</p>
+            </div>
+            <div className="text-white">
+              Would be embarrased to ask a store to put a hot drink in their own
+              cup
+            </div>
+            <div className="text-white">reason 3</div>
+          </div>
+          <div className="flex flex-row justify-center items-center bg-deepgreen h-72 w-1/2">
+            <div className="text-yellow1">20%</div>
+            <div className="text-white">
+              &quot;I don&quot;t want to carry a dirty cup no room to carry the
+              cup&quot;
+            </div>
+            <div className="text-white">reason 4</div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
 export default function Home() {
   const targetRef = useRef();
 
@@ -73,7 +122,7 @@ export default function Home() {
             speed={16}
           >
             <div className="flex text-center">
-              <p className="text-8xl p-8 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-recuppagreen to-recuppalight">
+              <p className="text-8xl p-8 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green1 to-blue2">
                 introducing recuppa.
               </p>
             </div>
@@ -134,11 +183,14 @@ export default function Home() {
           opacity={[-2, 10, "easeInOut"]}
           targetElement={targetElement}
         ></Parallax>
+        <div className="flex h-screen w-screen text-6xl justify-center items-center">
+          <h1 className="m-7">Why don&apos;t people use reusable cups?</h1>
+        </div>
         <section
           id="the-disposable-cup-problem"
-          className="flex flex-row text-4xl justify-center text-center bg-recuppadark w-screen h-screen text-white"
+          className="flex flex-row text-4xl justify-center items-center bg-deepblue w-screen h-screen text-white"
         >
-          <h1 className="m-7">the disposable cup problem</h1>
+          <ReasonCards />
         </section>
         <Commendations />
         <Footer />

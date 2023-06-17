@@ -2,7 +2,7 @@ import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="h-72 w-screen bg-recuppagreen text-white">
+    <footer className="h-72 w-screen bg-deepgreen text-white">
       <div className="flex flex-row pl-32 pr-32 pt-10 justify-between">
         <div className="flex flex-col">
           <h2 className="text-xl">recuppa</h2>
